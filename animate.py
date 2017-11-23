@@ -1,3 +1,4 @@
+#using the inbuilt animation function
 import  matplotlib.pyplot as plt
 import matplotlib.animation as anime
 from matplotlib import style
@@ -21,5 +22,6 @@ def animate(i):
     ax1.clear()
     ax1.plot(xs,ys)
 
-an=anime.FuncAnimation(fig,animate,interval=500) # te function takes the figure to animate, the animation function and time in milliseconds
+an=anime.FuncAnimation(fig,animate,interval=500) # the function takes the figure to animate, 
+#the animation function and time in milliseconds
 plt.show()
