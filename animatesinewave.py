@@ -1,3 +1,4 @@
+#custom animation function
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib.animation as anime
@@ -26,10 +27,10 @@ time=np.arange(0,10,0.1)
 for i in range(len(time)):
     Interimtime=time[i]
     xs.append(Interimtime)
-    ys.append(np.sin(Interimtime))
-    plt.pause(0.1)
-    plt.clf()
-    plt.plot(xs,ys)
+    ys.append(np.sin(Interimtime)) # the sine value
+    plt.pause(0.1) # pause to give animation effect
+    plt.clf() # clear figure
+    plt.plot(xs,ys)# plot updated xs and ys list after appending hence, the graph grows giving illusion of animation
     plt.title('SINE WAVE t='+str(i/10))
     plt.xlabel('Radians')
     plt.axhline(y=0, color='w')
@@ -38,5 +39,3 @@ for i in range(len(time)):
     plt.ylabel('AMPLITUDE=SIN(TIME)')
     plt.grid(True,which='both')
 plt.show()
-
-
